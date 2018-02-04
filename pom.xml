@@ -1,0 +1,96 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+
+  <groupId>jim.test</groupId>
+  <artifactId>speedTest</artifactId>
+  <version>0.0.1-SNAPSHOT</version>
+  <packaging>jar</packaging>
+
+  <name>speedTest</name>
+  <url>http://maven.apache.org</url>
+
+  <!--  using a specific repo in this project to get to the pi4j dependencies that aren't in WMT Nexus -->
+  <repositories>
+    <repository>
+      <id>pi4j-snapshot</id>
+      <name>pi4j-snapshot</name>
+      <url>https://oss.sonatype.org/content/groups/public</url>
+      <snapshots>
+        <enabled>true</enabled>
+        <updatePolicy>always</updatePolicy>
+      </snapshots>
+    </repository>
+  </repositories>
+  
+  <properties>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    <gpio.pi4j.version>1.2-SNAPSHOT</gpio.pi4j.version>
+  </properties>
+
+  <dependencies>
+
+    <dependency>
+      <groupId>junit</groupId>
+      <artifactId>junit</artifactId>
+      <version>3.8.1</version>
+      <scope>test</scope>
+    </dependency>
+
+    <dependency>
+      <groupId>com.pi4j</groupId>
+    	  <artifactId>pi4j-core</artifactId>
+    	  <version>${gpio.pi4j.version}</version>
+    </dependency>
+
+    <dependency>
+      <groupId>com.pi4j</groupId>
+    	  <artifactId>pi4j-device</artifactId>
+    	  <version>${gpio.pi4j.version}</version>
+    </dependency>
+
+    <dependency>
+    	  <groupId>org.fusesource.jansi</groupId>
+    	  <artifactId>jansi</artifactId>
+    	  <version>1.14</version>
+    </dependency>
+
+    <dependency>
+    	<groupId>com.google.guava</groupId>
+    	<artifactId>guava</artifactId>
+    	<version>22.0</version>
+    </dependency>
+  </dependencies>
+
+  <build>
+    <plugins>
+
+      <plugin>
+        <artifactId>maven-jar-plugin</artifactId>
+        <version>2.6</version>
+        <configuration>
+          <archive>
+            <manifest>
+              <addClasspath>true</addClasspath>
+              <mainClass>jim.pi.speedtrap.PiSpeedSensorMain</mainClass>
+            </manifest>
+          </archive>
+        </configuration>
+      </plugin>
+
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-compiler-plugin</artifactId>
+        <version>3.3</version>
+        <configuration>
+          <source>1.8</source>
+          <target>1.8</target>
+          <testSource>1.8</testSource>
+          <testTarget>1.8</testTarget>
+        </configuration>
+      </plugin>
+      
+    </plugins>
+  </build>
+
+</project>
