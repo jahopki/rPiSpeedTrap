@@ -5,13 +5,13 @@ IR sensors and blink some LEDs off and on through the process.  (It should be no
 version of pi4j located [here](https://oss.sonatype.org/index.html#nexus-search;gav~com.pi4j~pi4j-*~1.2-SNAPSHOT~~).)
 
 There are some key assumptions currently embedded in this project:
-	* The IR sensors are exactly 12 inches apart from each other
-	* The model car being used is 1/66 scale size
-	* You're using a Pi 2 Model B+
-	* Aside from the alternate repository reference to obtain the 1.2-SNAPSHOT version of pi4j, I assume that you have Maven configured in a manner to resolve the "normal" artifacts included in this project, which include:
-		* junit : junit : 3.8.1  (even though I haven't actually written any tests ;-P )
-		* org.fusesource.jansi : jansi : 1.14
-		* com.google.guava : guava : 22.0 
+* The IR sensors are exactly 12 inches apart from each other
+* The model car being used is 1/66 scale size
+* You're using a Pi 2 Model B+
+* Aside from the alternate repository reference to obtain the 1.2-SNAPSHOT version of pi4j, I assume that you have Maven configured in a manner to resolve the "normal" artifacts included in this project, which include:
+* junit : junit : 3.8.1  (even though I haven't actually written any tests ;-P )
+	* org.fusesource.jansi : jansi : 1.14
+	* com.google.guava : guava : 22.0 
 	
 As mentioned, we're using the pi4j project to manage GPIO communication.  This includes the integration with wiringPi.
 This is a bit different than most (python) GPIO examples as they use the more standard Broadcomm GPIO communication.
