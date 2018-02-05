@@ -22,9 +22,9 @@ to the Pi Model B Plus.
 
 Currently, the process is hardcoded for specific GPIO inputs / outputs because I haven't (yet) allowed for system properties
 (or something similarly configurable) to avoid this.  As it is, here are the GPIO values currently used:
-	* LED pin for "green" light (associated with speed trap start IR sensor) -> `RaspiPin.GPIO_01`
-	* LED pin for "red" light  (associated with speed trap finish IR sensor) -> `RaspiPin.GPIO_21`
-	* Digital input pin associated with start line IR sensor -> `RaspiPin.GPIO_27`
-	* Digital input pin associated with start line IR sensor -> `RaspiPin.GPIO_26`
-	* The IR sensors are powered and grounded through the 5V channel of a breadboard / Pi GPIO
-	* The LEDs are grounded through a resistor and powered by the output pin / channel of the rPi (so they're on the opposite side of the breadboard as the IR sensor input pins)
+* LED pin for "green" light (associated with speed trap start IR sensor) -> `RaspiPin.GPIO_01`
+* LED pin for "red" light  (associated with speed trap finish IR sensor) -> `RaspiPin.GPIO_21`
+* Digital input pin associated with start line IR sensor -> `RaspiPin.GPIO_27`
+* Digital input pin associated with start line IR sensor -> `RaspiPin.GPIO_26`
+* The IR sensors are powered and grounded through the 5V channel of a breadboard / Pi GPIO
+* The LEDs are grounded through a resistor and powered by the output pin / channel of the rPi (so they're on the opposite side of the breadboard as the IR sensor input pins)
