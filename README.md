@@ -1,5 +1,7 @@
 # rPi Speed Trap
 
+Many thanks are owed to [Bryan Kemp](https://github.com/bryankemp) for his exemplary assistance in the calculations in this project.  I can follow directions well, but I'm not so good at the maths. :)
+
 This project uses the [pi4j](http://pi4j.com/ "pi4j") GPIO utility APIs to calculate the speed of a model car (Hot Wheels) between two
 IR sensors and blink some LEDs off and on through the process.  (It should be noted that we're actually using the 1.2 SNAPSHOT
 version of pi4j located [here](https://oss.sonatype.org/index.html#nexus-search;gav~com.pi4j~pi4j-*~1.2-SNAPSHOT~~).)
