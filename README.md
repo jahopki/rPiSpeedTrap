@@ -11,7 +11,7 @@ There are some key assumptions currently embedded in this project:
 * The model car being used is 1/66 scale size
 * You're using a Pi 2 Model B+
 * Aside from the alternate repository reference to obtain the 1.2-SNAPSHOT version of pi4j, I assume that you have Maven configured in a manner to resolve the "normal" artifacts included in this project, which include:
-* junit : junit : 3.8.1  (even though I haven't actually written any tests ;-P )
+	* junit : junit : 3.8.1  (even though I haven't actually written any tests ;-P )
 	* org.fusesource.jansi : jansi : 1.14
 	* com.google.guava : guava : 22.0 
 	
